@@ -1,6 +1,7 @@
 import pygame
 import sys
 from settings import Settings
+from ship import Ship
 
 class AlienInvasion:
     
@@ -33,11 +34,12 @@ class AlienInvasion:
         
         self.running = True
         self.clock = pygame.time.Clock()
+
+        self.ship = Ship(self)
         """
 
         self.game_stats = GameStats(self)
         self.HUD = HUD(self)
-        self.ship = Ship(self)
         self.aliens = AlienFleet(self)
 
         pygame.mixer.init()
@@ -47,16 +49,23 @@ class AlienInvasion:
     def run_game(self) -> None:
         # Game loop
         while self.running:
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    self.running = False
-                    pygame.quit()
-                    sys.exit()
-            
-            self.screen.blit(self.bg, (0, 0))
-            pygame.display.flip()
-            self.clock.tick(self.settings.FPS)
+             self._check_events()
 
+             self._update_screen()
+             self.clock.tick(self.settings.FPS)
+
+    def _update_screen(self) -> None:
+        self.screen.blit(self.bg, (0, 0))
+        self.ship.draw()
+        pygame.display.flip()
+    
+    def _check_events(self) -> None:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                self.running = False
+                pygame.quit()
+                sys.exit()
+       
 if __name__ == "__main__":
     ai = AlienInvasion()
     ai.run_game()
