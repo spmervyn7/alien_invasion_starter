@@ -23,3 +23,8 @@ class Settings:
         self.bullet_w = 25
         self.bullet_h = 80
         self.bullet_amount = 5
+
+        self.alien_file = Path.cwd() / 'Assets' / 'images' / 'enemy_4.png'
+        self.fleet_speed = 5
+        self.alien_w = 40 
+        self.alien_h = 40
