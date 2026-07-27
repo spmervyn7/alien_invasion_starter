@@ -10,11 +10,13 @@ class AlienFleet:
     def __init__(self, game = 'AlienInvasion') -> None:
         self.game = game
         self.settings = game.settings
-        self.fleet = pygame.sprite.Group()
+        #self.fleet = pygame.sprite.Group()
         self.fleet_direction = self.settings.fleet_direction
         self.fleet_drop_speed = self.settings.fleet_drop_speed
 
         self.create_Fleet()
+
+        self.aliens = pygame.sprite.Group()
 
     def create_Fleet(self) -> None:
         alien_w = self.settings.alien_w
@@ -54,9 +56,12 @@ class AlienFleet:
         return int(fleet_w), int(fleet_h)
 
     def _create_alien(self, current_x: int, current_y:int) -> None:
-        new_alien = Alien(self, current_x, current_y)
+        #new_alien = Alien(self, current_x, current_y)
 
-        self.fleet.add(new_alien)
+        #self.fleet.add(new_alien)
+
+        new_alien = Alien(self, current_x, current_y)
+        self.aliens.add(new_alien)
 
     def draw(self) -> None:
         alien: 'Alien'
