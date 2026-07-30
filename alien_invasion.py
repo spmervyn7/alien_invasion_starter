@@ -86,7 +86,7 @@ class AlienInvasion:
         self.alien_fleet.create_Fleet()
 
     def restart_game(self):
-        # setting up dynamic settings
+        self.settings.initialize_dynamic_settings()
         # reset game stats
         # update HUD scores
         self._reset_level()
@@ -99,6 +99,7 @@ class AlienInvasion:
         self.ship.draw()
         self.ship.arsenal.draw()  # <-- ADDED: Draws laser projectiles onto the screen!
         self.alien_fleet.draw()
+        # draw HUD
 
         if not self.game_active:
             self.play_button.draw()
