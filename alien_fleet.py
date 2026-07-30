@@ -37,16 +37,13 @@ class AlienFleet:
                 self._create_alien(current_x, current_y)
 
     def calculate_offsets(self, alien_w, screen_w, alien_h, fleet_w, fleet_h) -> tuple[int, int]:
-        screen_h = self.settings.screen_h
-        fleet_horizontal_space = fleet_w * alien_w
-        fleet_vertical_space = fleet_h * alien_h
-        x_offset = int((screen_w - fleet_horizontal_space)//2)
-        y_offset = int((screen_h - fleet_vertical_space)//2)
-        return x_offset,y_offset
+        x_offset = 0
+        y_offset = 0  # Starts from the topmost corner
+        return x_offset, y_offset
 
     def calculate_fleet_size(self, alien_w, screen_w, alien_h, screen_h) -> tuple[int, int]:
-        fleet_w = (screen_w/alien_w)
-        fleet_h = ((screen_h/2)//alien_h)
+        fleet_w = (screen_w / alien_w)
+        fleet_h = ((screen_h / 2) // alien_h)
 
         if fleet_w % 2 == 0:
             fleet_w -= 1
@@ -60,9 +57,8 @@ class AlienFleet:
 
         return int(fleet_w), int(fleet_h)
 
-    def _create_alien(self, current_x: int, current_y:int) -> None:
+    def _create_alien(self, current_x: int, current_y: int) -> None:
         new_alien = Alien(self, current_x, current_y)
-
         self.fleet.add(new_alien)
 
     def _check_fleet_edges(self):
@@ -75,7 +71,6 @@ class AlienFleet:
 
     def _drop_alien_fleet(self) -> None:
         for alien in self.fleet:
-            print('here')
             alien.y += self.fleet_drop_speed
 
     def update_fleet(self) -> None:
@@ -86,3 +81,13 @@ class AlienFleet:
         alien: 'Alien'
         for alien in self.fleet:
             alien.draw_alien()
+
+    def check_collisions(self, other_group) -> dict[any, list]:
+        return pygame.sprite.groupcollide(self.fleet, other_group, True, True)
+
+    def check_fleet_bottom(self):
+        alien: Alien
+        for alien in self.fleet:
+            if alien.rect.bottom >= self.settings.screen_h:
+                return True
+        return False
