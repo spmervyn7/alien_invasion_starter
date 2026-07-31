@@ -63,3 +63,4 @@ class GameStats():
 
     def update_level(self) -> None:
         self.level += 1
+        print(self.level)
