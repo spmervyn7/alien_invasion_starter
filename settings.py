@@ -12,6 +12,7 @@ class Settings:
         self.fps = 60
         self.bg_file = Path.cwd() / 'Assets' / 'images' / 'Starbasesnow.png'
         self.difficulty_scale = 1.1
+        self.scores_file = Path.cwd() / 'Assets' / 'file' / 'scores.json'
 
         self.ship_file = Path.cwd() / 'Assets' / 'images' / 'ship2(no bg).png'
         self.ship_w = 60
@@ -38,6 +39,7 @@ class Settings:
         self.font_style = Path.cwd() / 'Assets' / 'Fonts' / 'Silkscreen' / 'Silkscreen-Bold.ttf'
 
     def initialize_dynamic_settings(self) -> None:
+
         self.ship_speed = 10
         self.starting_ship_count = 3
 
@@ -51,6 +53,7 @@ class Settings:
         self.alien_points = 50
 
     def increase_difficulty(self) -> None:
+
         self.ship_speed *= self.difficulty_scale
         self.bullet_speed *= self.difficulty_scale
         self.fleet_speed *= self.difficulty_scale
