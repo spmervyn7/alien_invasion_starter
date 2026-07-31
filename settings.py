@@ -14,8 +14,8 @@ class Settings:
         self.difficulty_scale = 1.1
 
         self.ship_file = Path.cwd() / 'Assets' / 'images' / 'ship2(no bg).png'
-        self.ship_w = 40
-        self.ship_h = 60
+        self.ship_w = 60
+        self.ship_h = 90
         
         self.bullet_file = Path.cwd() / 'Assets' / 'images' / 'laserBlast.png'
         self.laser_sound = Path.cwd() / 'Assets' / 'sound' / 'laser.mp3'
@@ -30,7 +30,7 @@ class Settings:
 
         self.button_w = 200
         self.button_h = 50
-        self.button_color = (0, 135, 50)
+        self.button_color = (0, 160, 220)
 
         self.text_color = (255, 255, 255)
         self.button_font_size = 48
@@ -48,6 +48,7 @@ class Settings:
         
         self.fleet_speed = 2
         self.fleet_drop_speed = 40
+        self.alien_points = 50
 
     def increase_difficulty(self) -> None:
         self.ship_speed *= self.difficulty_scale
