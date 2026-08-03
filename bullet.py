@@ -4,6 +4,10 @@ Author: Mervyn S. Philip
 Purpose: This code creates a single laser bullet fired by the ship.
          It loads the picture of the laser, moves it straight up 
          the screen, and draws it so you can see it.
+Starter Code: Adapted from the in-class Alien Invasion tutorial
+             (base repo: https://github.com/RedBeard41/alien_Invasion_starter.git)
+             It sets up the bullet's image, tells the game where to find pictures and
+             sounds, and controls how the bullet moves and draws itself.
 Date: 2026-07-31
 """
 

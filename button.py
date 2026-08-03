@@ -4,6 +4,10 @@ Author: Mervyn S. Philip
 Purpose: This code creates the "Play" button used to start and 
          restart the game. It is styled with the game's special
          colors and font.
+Starter Code: Adapted from the in-class Alien Invasion tutorial
+             (base repo: https://github.com/RedBeard41/alien_Invasion_starter.git)
+             It creates a button with a text label that can be clicked to start or
+             restart the game.
 Date: 2026-07-31
 """
 

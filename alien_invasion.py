@@ -7,6 +7,11 @@ Purpose: This is the main controller that runs the Alien Invasion
          screen, and start button), runs the main gameplay loop,
          listens for player button presses, and handles crashes, 
          restarting levels, and game over screens.
+Starter Code: Adapted from the in-class Alien Invasion tutorial
+             (base repo: https://github.com/RedBeard41/alien_Invasion_starter.git)
+             It sets up the game screen, tells the game where to find pictures and
+             sounds, and controls how the game runs and responds to player input.
+
 Date: 2026-07-31
 """
 

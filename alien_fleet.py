@@ -6,6 +6,11 @@ Purpose: This code creates and controls a group of alien characters.
          triangles pointing up and down. It also moves the whole group together,
          makes them turn and drop down when they hit the edge of the screen, and 
          checks if they crash into anything or get destroyed.
+Starter Code: Adapted from the in-class Alien Invasion tutorial
+             (base repo: https://github.com/RedBeard41/alien_Invasion_starter.git)
+             It sets up the alien fleet, tells the game where to find pictures and
+             sounds, and controls how the aliens move and interact with the ship 
+             and bullets.
 Date: 2026-07-31
 """
 

@@ -5,6 +5,10 @@ Purpose: This code manages the bullets shot by the ship. It creates
          new bullets (up to a set limit), moves them forward, deletes
          them when they go off the screen, and draws them on the 
          display.
+Starter Code: Adapted from the in-class Alien Invasion tutorial
+             (base repo: https://github.com/RedBeard41/alien_Invasion_starter.git)
+             It sets up the arsenal of bullets, tells the game where to find pictures and
+             sounds, and controls how the bullets move and draw themselves.
 Date: 2026-07-31
 """
 

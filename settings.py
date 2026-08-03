@@ -5,6 +5,11 @@ Purpose: This saves all the game's settings (like screen size,
          speeds, and colors) in one central place. That way, 
          other parts of the game can easily use them instead 
          of repeating the numbers everywhere.
+Starter Code: Adapted from the in-class Alien Invasion tutorial
+             (base repo: https://github.com/RedBeard41/alien_Invasion_starter.git).
+             It sets up the game screen, tells the game where to find pictures and
+             sounds, and controls how the game gets harder over time for a special
+             project milestone.
 Date: 2026-07-31
 """
 

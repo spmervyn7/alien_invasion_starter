@@ -4,6 +4,10 @@ Author: Mervyn S. Philip
 Purpose: This code creates the player's spaceship. It keeps track of the
          ship's picture, where it is on the screen, how it moves left and 
          right, how it shoots bullets, and whether it crashes into the alien ships.
+Starter Code: Adapted from the in-class Alien Invasion tutorial
+             (base repo: https://github.com/RedBeard41/alien_Invasion_starter.git)
+             It sets up the ship's image, tells the game where to find pictures and
+             sounds, and controls how the ship moves and fires.
 Date: 2026-07-31
 """
 

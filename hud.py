@@ -4,6 +4,10 @@ Author: Mervyn S. Philip
 Purpose: This code creates the scoreboard on the screen. It shows
          the player's current score, top score, game level, and how 
          many lives are left (using little ship pictures) in a special font.
+Starter Code: Adapted from the in-class Alien Invasion tutorial
+             (base repo: https://github.com/RedBeard41/alien_Invasion_starter.git)
+             It sets up the HUD's font, tells the game where to find pictures and 
+             sounds, and controls how the HUD updates and draws itself.
 Date: 2026-07-31
 """
 

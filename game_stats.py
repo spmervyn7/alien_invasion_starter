@@ -5,6 +5,10 @@ Purpose: This code keeps track of the game numbers, like your current
          score, top score, level, and remaining lives. It also saves
          the high score to a file on your computer so it stays saved 
          even after you close the game.
+Starter Code: Adapted from the in-class Alien Invasion tutorial
+             (base repo: https://github.com/RedBeard41/alien_Invasion_starter.git)
+             It sets up the game stats, tells the game where to find pictures and
+             sounds, and controls how the game tracks scores and levels.
 Date: 2026-07-31
 """
 
